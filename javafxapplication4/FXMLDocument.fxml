@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="640.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication4.FXMLDocumentController">
+   <children>
+      <TabPane prefHeight="640.0" prefWidth="1006.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="PersonneTab" text="Personne">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="430.0" prefWidth="707.0">
+                     <children>
+                        <VBox layoutX="14.0" layoutY="69.0" prefHeight="266.0" prefWidth="101.0" spacing="15.0">
+                           <children>
+                              <Label text="idPersonne" />
+                              <Label text="Nom" />
+                              <Label text="Prenom" />
+                              <Label text="Sexe" />
+                              <Label text="Lieu de naissance" />
+                              <Label text="Date de naissance" />
+                              <Label text="idPere" />
+                              <Label text="idMere" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="135.0" layoutY="66.0" prefHeight="262.0" prefWidth="138.0" spacing="7.0">
+                           <children>
+                              <TextField fx:id="tfIdPersonne" />
+                              <TextField fx:id="tfNom" />
+                              <TextField fx:id="tfPrenom" />
+                              <TextField fx:id="tfSexe" />
+                              <TextField fx:id="tfLieuNaiss" />
+                              <DatePicker fx:id="dpDateNaiss" />
+                              <TextField fx:id="tfIdPere" />
+                              <TextField fx:id="tfIdMere" />
+                           </children>
+                        </VBox>
+                        <TableView fx:id="tvPersonne" layoutX="293.0" layoutY="66.0" onMouseClicked="#handleMouseAction1" prefHeight="428.0" prefWidth="703.0">
+                          <columns>
+                            <TableColumn fx:id="idCol" prefWidth="38.4000244140625" text="ID" />
+                            <TableColumn fx:id="nomCol" prefWidth="51.20001220703125" text="Nom" />
+                              <TableColumn fx:id="prenomCol" prefWidth="73.5999755859375" text="Prenom" />
+                              <TableColumn fx:id="sexeCol" prefWidth="49.5999755859375" text="Sexe" />
+                              <TableColumn fx:id="lieuNaissCol" prefWidth="102.39996337890625" text="Lieu Naiss" />
+                              <TableColumn fx:id="dateNaissCol" prefWidth="114.4000244140625" text="Date Naiss" />
+                              <TableColumn fx:id="idPereCol" prefWidth="126.39996337890625" text="idPere" />
+                              <TableColumn fx:id="idMereCol" prefWidth="147.199951171875" text="idMere" />
+                          </columns>
+                        </TableView>
+                        <Text layoutX="22.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Etat Civil: Personne" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="btmInsert1" layoutX="12.0" layoutY="375.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="34.0" prefWidth="74.0" text="Insert" />
+                        <Button fx:id="btmUpdate1" layoutX="99.0" layoutY="377.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="32.0" prefWidth="83.0" text="Update" />
+                        <Button fx:id="btmDelete1" layoutX="191.0" layoutY="377.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="32.0" prefWidth="82.0" text="Delete" />
+                        <TextField fx:id="keywordTextField1" layoutX="381.0" layoutY="25.0" prefHeight="26.0" prefWidth="561.0" />
+                        <Label layoutX="316.0" layoutY="29.0" text="Search" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="MariageTab" text="Mariage">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="611.0" prefWidth="1006.0">
+                     <children>
+                        <VBox layoutX="28.0" layoutY="84.0" prefHeight="169.0" prefWidth="119.0" spacing="15.0">
+                           <children>
+                              <Label text="IdMariage" />
+                              <Label text="Id Epoux" />
+                              <Label text="Id Epouse" />
+                              <Label text="Date de Mariage" />
+                              <Label text="Lieu de Mariage" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="131.0" layoutY="82.0" prefHeight="176.0" prefWidth="138.0" spacing="7.0">
+                           <children>
+                              <TextField fx:id="tfIdMariage" />
+                              <TextField fx:id="tfIdEpoux" />
+                              <TextField fx:id="tfIdEpouse" />
+                              <DatePicker fx:id="dpDateMariage" />
+                              <TextField fx:id="tfLieuMariage" />
+                           </children>
+                        </VBox>
+                        <Text layoutX="35.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Etat Civil : Mariage">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Text>
+                        <TableView fx:id="tvMariage" layoutX="275.0" layoutY="78.0" onMouseClicked="#handleMouseAction2" prefHeight="438.0" prefWidth="724.0">
+                          <columns>
+                            <TableColumn fx:id="idMariageCol" prefWidth="96.79998779296875" text="IdMariage" />
+                            <TableColumn fx:id="idEpouxCol" prefWidth="126.4000244140625" text="idEpoux" />
+                              <TableColumn fx:id="idEpouseCol" prefWidth="160.0" text="idEpouse" />
+                              <TableColumn fx:id="dateMariageCol" minWidth="0.0" prefWidth="147.199951171875" text="Date Mariage" />
+                              <TableColumn fx:id="lieuMariageCol" prefWidth="193.5999755859375" text="Lieu de Mariage" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="btmInsert2" layoutX="13.0" layoutY="273.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="76.0" text="Insert" />
+                        <Button fx:id="btmDelete2" layoutX="186.0" layoutY="273.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="81.0" text="Delete" />
+                        <Button fx:id="btmUpdate2" layoutX="98.0" layoutY="273.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="77.0" text="Update" />
+                        <Label layoutX="312.0" layoutY="31.0" text="Search" />
+                        <TextField fx:id="keywordTextField2" layoutX="367.0" layoutY="27.0" prefHeight="26.0" prefWidth="566.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="DecesTab" text="Deces">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="33.0" layoutY="59.0" prefHeight="174.0" prefWidth="100.0" spacing="15.0">
+                           <children>
+                              <Label text="Id Deces" />
+                              <Label text="Id Feu" />
+                              <Label prefHeight="18.0" prefWidth="86.0" text="Date de Deces" />
+                              <Label text="Lieu de Deces" />
+                              <Label text="Cause de Deces" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="148.0" layoutY="56.0" prefHeight="175.0" prefWidth="134.0" spacing="7.0">
+                           <children>
+                              <TextField fx:id="tfIdDeces" />
+                              <TextField fx:id="tfIdFeu" />
+                              <DatePicker fx:id="dpDateDeces" />
+                              <TextField fx:id="tfLieuDeces" />
+                              <TextField fx:id="tfCauseDeces" />
+                           </children>
+                        </VBox>
+                        <Text layoutX="33.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Etat Civil : Deces">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </Text>
+                        <TableView fx:id="tvDeces" layoutX="322.0" layoutY="59.0" onMouseClicked="#handleMouseAction3" prefHeight="394.0" prefWidth="677.0">
+                          <columns>
+                            <TableColumn fx:id="idDecesCol" prefWidth="75.0" text="Id Deces" />
+                            <TableColumn fx:id="idFeuCol" prefWidth="150.39996337890625" text="idFeu" />
+                              <TableColumn fx:id="dateDecesCol" prefWidth="139.20001220703125" text="Date de Deces" />
+                              <TableColumn fx:id="lieuDecesCol" prefWidth="139.199951171875" text="Lieu De Deces" />
+                              <TableColumn fx:id="causeDecesCol" prefWidth="174.4000244140625" text="Cause de Deces" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="btmInsert3" layoutX="16.0" layoutY="259.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="71.0" text="Insert" />
+                        <Button fx:id="btmUpdate3" layoutX="99.0" layoutY="259.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="72.0" text="Update" />
+                        <Button fx:id="btmDelete3" layoutX="186.0" layoutY="259.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="81.0" text="Delete" />
+                        <TextField fx:id="keywordTextField3" layoutX="396.0" layoutY="20.0" prefHeight="26.0" prefWidth="603.0" />
+                        <Label layoutX="338.0" layoutY="23.0" text="Search" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
